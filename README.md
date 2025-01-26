@@ -12,7 +12,6 @@ A Python framework to monitor mutual fund allocation changes over time. This too
 - [Example Output](#example-output)
 - [Extending the Project](#extending-the-project)
 - [Contributing](#contributing)
-- [License](#license)
 - [Acknowledgments](#acknowledgments)
 
 ## Introduction
