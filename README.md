@@ -169,14 +169,9 @@ Contributions are welcome! If you'd like to improve or expand this project:
 
 Please ensure your code adheres to the project's coding standards and includes appropriate documentation.
 
-## License
 
-This project is licensed under the MIT License.
 
 ## Acknowledgments
 
 - [pandas](https://pandas.pydata.org/)
 - [tabulate](https://pypi.org/project/tabulate/)
-- [openpyxl](https://openpyxl.readthedocs.io/)
-
-Special thanks to everyone who contributed to this project.
