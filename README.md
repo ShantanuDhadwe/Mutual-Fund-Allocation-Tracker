@@ -1,5 +1,5 @@
-# Mutual Fund Allocation Tracker
-#A Python framework to monitor mutual fund allocation changes over time. This tool processes large datasets, allowing users to select funds and date ranges to view changes, with outputs displayed by fund and by month.
+Mutual Fund Allocation Tracker
+A Python framework to monitor mutual fund allocation changes over time. This tool processes large datasets, allowing users to select funds and date ranges to view changes, with outputs displayed by fund and by month.
 
 Table of Contents
 Introduction
@@ -36,9 +36,12 @@ tabulate
 Datasets: Excel files containing mutual fund holding data.
 Data Preparation
 Data Files: Prepare your mutual fund data files in Excel (.xlsx) format.
+
 File Naming Convention: Use a consistent naming convention for the files, such as {FundName}_{YYYYMMDD}.xlsx.
+
 Example: ZerodhaNiftyLargeMidcap250IndexFund_20230930.xlsx
 Data Structure: Ensure each file contains the following columns starting from row 6 (adjust skiprows if needed):
+
 Name of the Instrument
 ISIN
 Industry
@@ -47,6 +50,7 @@ Market Value (Rs. in Lakhs)
 % to NAV
 YTM % (if applicable)
 Consistent Formatting: Ensure all data files have the same structure and formatting for accurate processing.
+
 Installation
 Clone the Repository (if applicable):
 
@@ -59,7 +63,7 @@ Install Required Libraries:
 BASH
 
 pip install pandas openpyxl tabulate
-If you use requirements.txt, you can install dependencies with:
+If you use a requirements.txt file, you can install dependencies with:
 
 BASH
 
@@ -67,7 +71,7 @@ pip install -r requirements.txt
 Usage
 Place Data Files:
 
-Ensure your mutual fund data files are in the same directory as the Python script or update the paths accordingly.
+Ensure your mutual fund data files are in the same directory as the Python script or update the paths in the code accordingly.
 Run the Script:
 
 BASH
@@ -92,7 +96,7 @@ Enter the numbers corresponding to the start and end dates (e.g., '1 2'): 1 2
 
 Allocation Changes for Zerodha Nifty Large Midcap 250 Index Fund from 2023-09-30 to 2023-11-30:
 +-----------------------------+---------------------+-------------------+-----------------------+-----------+----------------+-------------------+
-|  Name of the Instrument     |  % to NAV_current   |  % to NAV_next    |  Allocation Change (%)|   Status  | New Instrument | Removed Instrument|
+| Name of the Instrument      |   % to NAV_current  |  % to NAV_next    |  Allocation Change (%)|   Status  | New Instrument | Removed Instrument|
 +-----------------------------+---------------------+-------------------+-----------------------+-----------+----------------+-------------------+
 | HDFC Bank Limited           |        4.6175       |      5.0741       |         0.4566        | Increased |     False      |       False       |
 | ICICI Bank Limited          |        3.1520       |      3.4113       |         0.2593        | Increased |     False      |       False       |
@@ -108,17 +112,44 @@ Instruments Removed:
 Note: The output will vary based on the data in your Excel files.
 
 Extending the Project
-Adding More Funds: Include additional funds by adding their data files to the load_data function.
+Adding More Funds: Include additional funds by adding their data files to the data_files list in the load_data function.
+
+Python
+
+data_files = [
+    ('Zerodha Nifty Large Midcap 250 Index Fund', 'september_data.xlsx', '2023-09-30'),
+    ('Zerodha Nifty Large Midcap 250 Index Fund', 'november_data.xlsx', '2023-11-30'),
+    ('Another Fund Name', 'another_fund_data.xlsx', '2023-09-30'),
+    # Add more funds and dates as needed
+]
 Including More Dates: Add more historical data files to analyze allocation changes over longer periods.
+
 Customizing Analysis: Modify the analyze_allocations function to include additional metrics or insights.
+
 Improving User Interface: Enhance the script by adding a graphical user interface (GUI) or a web-based interface.
+
 Contributing
 Contributions are welcome! If you'd like to improve or expand this project:
 
-Fork the repository.
-Create a new branch for your feature or bug fix.
-Commit your changes with descriptive messages.
-Push your branch and submit a pull request.
+Fork the Repository: Click the "Fork" button at the top of the repository page.
+
+Create a Branch: Create a new branch for your feature or bug fix:
+
+BASH
+
+git checkout -b feature/your-feature-name
+Commit Your Changes: Make your changes and commit them with descriptive messages:
+
+BASH
+
+git commit -m "Add your commit message here"
+Push to GitHub: Push your branch to your forked repository:
+
+BASH
+
+git push origin feature/your-feature-name
+Submit a Pull Request: Open a pull request on the original repository.
+
 Please ensure your code adheres to the project's coding standards and includes appropriate documentation.
 
 License
@@ -127,4 +158,5 @@ This project is licensed under the MIT License.
 Acknowledgments
 pandas: https://pandas.pydata.org/
 tabulate: https://pypi.org/project/tabulate/
-Special thanks to all who contributed to this project.
+openpyxl: https://openpyxl.readthedocs.io/
+Special thanks to everyone who contributed to this project.
