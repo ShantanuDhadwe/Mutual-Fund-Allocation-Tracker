@@ -1,5 +1,5 @@
-#Mutual Fund Allocation Tracker
-A Python framework to monitor mutual fund allocation changes over time. This tool processes large datasets, allowing users to select funds and date ranges to view changes, with outputs displayed by fund and by month.
+# Mutual Fund Allocation Tracker
+#A Python framework to monitor mutual fund allocation changes over time. This tool processes large datasets, allowing users to select funds and date ranges to view changes, with outputs displayed by fund and by month.
 
 Table of Contents
 Introduction
